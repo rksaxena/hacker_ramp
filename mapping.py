@@ -2,15 +2,15 @@ import json
 import pprint, operator
 
 ref_list = {}
-with open("colors_list","r") as f:
+with open("Article_type.txt","r") as f:
     c = f.readlines()
 
 for k in c:
     ref_list[(k.rstrip()).lower()] = True
 
 #print len(ref_list)
-with open("amazon_color_list.json") as af:
-    acl = json.load(af)
+#with open("amazon_color_list.json") as af:
+#    acl = json.load(af)
 
 #print len(acl["colour"])
 
@@ -42,7 +42,7 @@ for k in acl["colour"]:
 #print "Number of keys not found %s" %(len(not_found.keys()))
 #print "Number of keys found %s" %count
 #print json.dumps(found_in_color_list)
-#2. After inital mapping try the remaining keys with CMS mapping 
+#2. After inital mapping try the remaining keys with CMS mapping
 #print "Starting second step..."
 with open("cms_color_map") as f:
     cms_color_map = json.load(f)
@@ -74,8 +74,8 @@ for key in not_found_cms:
     for k in ks:
         for r in ref_list:
             if r in k:
-                partial_map_ct +=1
-                ks= " ".join(ks)
+                partial_map_ct += 1
+                ks =  " ".join(ks)
                 partial_map[ks] = r 
                 f = True
                 break
@@ -102,7 +102,7 @@ for key in not_found_cms:
 #print "Number of keys found in partial_map %s" %partial_map_ct
 
 #4. Try distance based similarity with the known keys
-import editdistance
+
 known_keys = ref_list.keys() + cms_color_map.keys()
 #print "Starting step 4..."
 ct_dist = 0
