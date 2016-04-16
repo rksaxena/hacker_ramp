@@ -1,0 +1,32 @@
+html
+    title
+        | Spidy
+    head
+        link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', rel='stylesheet')
+        link(href='https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css', rel='stylesheet')
+        link(href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.css', rel='stylesheet')
+        link(href='/stylesheets/style.css', rel='stylesheet')
+        script(src='https://code.jquery.com/jquery-2.2.3.min.js',integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=",crossorigin="anonymous",type='text/javascript')
+        script(src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")
+    .row
+        .col-sm-12
+            center
+                b
+                    font(size = '30')
+                        |SPIDY
+    br
+    br
+    br
+    .row
+        .col-sm-12
+            div(id='selector' class='row')
+                .spinner
+                    .rect1
+                    .rect2
+                    .rect3
+                    .rect4
+                    .rect5
+                center
+                    |Fetching Data
+            #graph_div
+    script(src='/javascripts/script.js' type='text/javascript')
