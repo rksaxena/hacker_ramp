@@ -47,8 +47,6 @@ def start_vogue():
 
     print "Extracting data from: " + str(data_urls)
 
-    data = []
-    count_tags = {}
     f = open("CrawledOutput.txt", 'w')
     for url in data_urls:
         httpres = s.get(url)
@@ -85,11 +83,7 @@ def create_zara_response():
     print len(values)
     values = [re.sub('[^A-Za-z ]+', '', x) for x in values]
     values = [x.lower() for x in values]
-    for value in values:
-        if "raglan" in value:
-            print value
     mappings = tags.create_article_type_map_zara(values)
-    print json.dumps(mappings)
     res = {
         'source': 'zara',
         'misc': []
@@ -114,25 +108,6 @@ def create_zara_response():
                 res[at].append(value)
             continue
         res['misc'].append(value)
-
-
-
-    '''
-    print len(mappings['dist_map'].keys() + mappings['partial_map'].keys())
-    for value in values:
-        is_added = False
-        for v in value.split(" "):
-            if v in article_types:
-                if v in res and value not in res[v]:
-                    res[v].append(value)
-                else:
-                    res[v] = []
-                    res[v].append(value)
-                is_added = True
-                continue
-        if not is_added:
-            res['misc'].append(value)
-    '''
     return res
 
 
