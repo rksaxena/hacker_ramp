@@ -341,3 +341,4 @@ Tshirt
 Shirt
 Dress
 Scarf
+T-shirt
