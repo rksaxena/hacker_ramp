@@ -31,7 +31,7 @@ def get_selection_gap(trends):
     gap ={
         'data':[]
     }
-    sources = trends['data']
+    sources = trends
     for source in sources:
         gap_obj ={}
         gap_obj['source'] = source['source']
@@ -67,8 +67,7 @@ def get_selection_gap(trends):
     return gap
 if __name__ == '__main__':
     print get_selection_gap(
-        {
-            'data':[{
+        [{
 
                         'source': 'Zara',
                         'skirts': ['midi skirts', 'short skirts' ],
@@ -76,5 +75,4 @@ if __name__ == '__main__':
                         'jeans' :['bell bottoms']
 
         }]
-        }
     )

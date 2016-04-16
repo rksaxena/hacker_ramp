@@ -10,7 +10,6 @@ Deos
 Partywear Sari
 Suspenders
 Lounge Set
-Ties
 Salwar and Dupatta
 Ornaments
 Precious Studded Pendant
@@ -23,7 +22,6 @@ Bridal Sari
 Customizable Shoes
 Face Towels
 Frocks
-Hand Wash
 Bath Sets
 Serum
 Tote Bags
@@ -137,7 +135,6 @@ Night Cream
 Dungarees
 Stockings
 Massage
-Toner
 Thermal Bottoms
 Jodhpuri Pants
 3/4 Length Pants
@@ -161,7 +158,6 @@ Sunscreen
 Nail Art
 Kajal
 Body Mist
-NULL
 Clothing Fabric
 Doormats
 Pyjama Set
@@ -222,6 +218,7 @@ Skirts
 Casual Shoes
 Ring
 Saree Blouse
+Blouse
 Luggage Bags
 Salwar
 Sports Accessories
@@ -317,7 +314,6 @@ Blusher
 Lip Colour
 Misc Consumable
 Shoe Accessories
-Comb
 Hard Drive case
 Waist Coat
 Tan Removal
@@ -341,3 +337,8 @@ Basketball
 Bedding Set
 Bottoms
 Belt
+Tshirt
+Shirt
+Dress
+Scarf
+T-shirt
