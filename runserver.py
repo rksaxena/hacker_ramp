@@ -15,6 +15,15 @@ def get_tags_all():
         return response
     demo = True
     response = [scrape.create_vogue_response(demo), scrape.create_zara_response(demo), scrape.create_elle_response(demo)]
+    print response
+    for json_value in response:
+        for key in json_value:
+            unique_values = set()
+            for val in json_value[key]:
+                if key != 'source' and val in unique_values:
+                    json_value[key].remove(val)
+                unique_values.add(val)
+
     response = myntra_selection_gap.get_selection_gap(response)
     print response
     if response:
@@ -41,6 +50,13 @@ def get_tags_vogue():
 def get_tags_zara():
     response = [scrape.create_zara_response()]
     response = myntra_selection_gap.get_selection_gap(response)
+    return json.dumps(response)
+
+
+@app.route('/tags')
+def get_tags():
+    demo = True
+    response = [scrape.create_vogue_response(demo), scrape.create_zara_response(demo), scrape.create_elle_response(demo)]
     return json.dumps(response)
 
 if __name__ == '__main__':

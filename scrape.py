@@ -168,15 +168,15 @@ def create_zara_response(demo=False):
             at = mappings['dist_map'][value]
             if at not in res:
                 res[at] = []
-            if value not in res[at]:
-                res[at].append(value)
+            # if value not in res[at]:
+            res[at].append(value)
             continue
         if value in mappings['partial_map']:
             at = mappings['partial_map'][value]
             if at not in res:
                 res[at] = []
-            if value not in res[at]:
-                res[at].append(value)
+            # if value not in res[at]:
+            res[at].append(value)
             continue
         res['misc'].append(value)
     return res
