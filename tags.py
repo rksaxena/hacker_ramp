@@ -7,8 +7,8 @@ import json
 
 def create_set_string_care_about():
     tags = set()
-    file_name = "Article_type.txt"
-    # file_name = "Strings_I_Care_About.txt"
+    # file_name = "Article_type.txt"
+    file_name = "Strings_I_Care_About.txt"
     f = open(file_name, 'r')
     for line in f:
         values = line.split(',')
@@ -16,6 +16,7 @@ def create_set_string_care_about():
             continue
         tags.add(values[0].lower()[:-1])
     return tags
+
 
 def create_set_article_types():
     ats = set()
@@ -31,6 +32,7 @@ def create_set_article_types():
 tags = {}
 article_types = {}
 
+
 def get_tags():
     global tags
     if len(tags) == 0 or len(tags) == 1:
@@ -43,6 +45,7 @@ def get_article_types():
     if len(article_types) == 0 or len(article_types) == 1:
         article_types = create_set_article_types()
     return article_types
+
 
 def call_text_enricher(text):
     printable = string.printable

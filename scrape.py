@@ -10,20 +10,22 @@ def start_zara():
     seedURL_women = "http://www.zara.com/in/en/new-in/woman/view-all-c811528.html"
     seedURL_men = "http://www.zara.com/in/en/new-in/man/view-all-c809013.html"
     s = requests.Session()
+    response = {}
     #Wmen
     http_response = s.get(seedURL_women)
     scrapyObject = HtmlResponse(url="HTML Body", body=http_response.content)
     a = scrapyObject.xpath('//div[contains(@class,"product-info")]/a/text()')
     top_zara_article_types_women = a.extract()
-    top_zara_article_types_women = [x.lower() for x in top_zara_article_types_women[0:50]]
-    print top_zara_article_types_women[0:50]
+    top_zara_article_types_women = [str(x.lower()) for x in top_zara_article_types_women[0:50]]
+    response["women"] = top_zara_article_types_women[0:50]
     #Men
     http_response = s.get(seedURL_men)
     scrapyObject = HtmlResponse(url="HTML Body", body=http_response.content)
     a = scrapyObject.xpath('//div[contains(@class,"product-info")]/a/text()')
     top_zara_article_types_men = a.extract()
-    top_zara_article_types_men = [x.lower() for x in top_zara_article_types_men[0:50]]
-    print top_zara_article_types_men[0:50]
+    top_zara_article_types_men = [str(x.lower()) for x in top_zara_article_types_men[0:50]]
+    response["men"] = top_zara_article_types_men[0:50]
+    return response
 
 def start_vogue():
     seedURL = "http://www.vogue.in/fashion/fashion-trends/"
@@ -66,6 +68,13 @@ def start_with_file():
     print json_response
 
 
+def create_zara_response():
+    response = start_zara()
+    out_response = {
+        'zara': response
+    }
+    print json.dumps(out_response)
+    return out_response
 
 if __name__ == "__main__":
-    start_zara()
+    start_with_file()
