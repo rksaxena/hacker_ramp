@@ -13,14 +13,14 @@ def count_duplicates_within_source(json):
     for k, v in json.iteritems():
         new_map[k] = dict()
         for string in v:
-            new_map[k].update({string:
-                              {
-                                  'source': source,
-                                  'count': 1
-                              }
-            })
             if string not in unique:
                 unique.add(string)
+                new_map[k].update({string:
+                    {
+                        'source': source,
+                        'count': 1
+                    }
+                })
             else:
                 new_map[k][string]['count'] += 1
     return new_map
