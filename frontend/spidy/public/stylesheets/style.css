@@ -56,6 +56,17 @@ body {
   }
 }
 
-a {
-  color: #00B7FF;
+
+
+.card-image{
+    height:60%;
+    width:60%
+}
+.card
+{
+    border:2px solid black;
+    padding:5px;
+    cursor:pointer;
+    height:350px;
+    width:350px;
 }

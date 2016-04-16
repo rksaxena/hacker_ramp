@@ -66,8 +66,20 @@ SPIDY_APP = {
                 rows = rows + '<tr><td>' + type + '</td><td>' + master_object[type] + '</td></tr>'
             }
             var tbody='<tbody>' + rows + '</tbody>';
-            var table = '<table class="table table-bordered table-striped">' + thead + tbody + '</table>';
+            var table = '<table id="selection_gap_table" class="table table-bordered table-striped">' + thead + tbody + '</table>';
             $('#graph_div').html('<br><center>' + table + '</center>');
+            $('#selection_gap_table').DataTable(
+            {
+            "scrollY":        "100%",
+            "scrollCollapse": true,
+            "paging":         false,
+            "filter":false,
+
+            "columnDefs": [
+                        { "width": "30%", "targets": 0 },
+                        { "bSortable": true, "aTargets":[0]}
+                        ]
+            });
             return ;
         }
         var obj;
@@ -90,8 +102,21 @@ SPIDY_APP = {
             rows = rows + '<tr><td>' + type + '</td><td>' + obj[type]['absent_trends'] + '</td></tr>'
         }
         var tbody='<tbody>' + rows + '</tbody>';
-        var table = '<table class="table table-bordered table-striped">' + thead + tbody + '</table>';
+        var table = '<table  id="selection_gap_table" class="table table-bordered table-striped">' + thead + tbody + '</table>';
         $('#graph_div').html('<br><center>' + table + '</center>');
+        $('#selection_gap_table').DataTable(
+            {
+            "scrollY":        "100%",
+            "scrollCollapse": true,
+            "paging":         false,
+            "filter":false,
+
+            "columnDefs": [
+                        { "width": "30%", "targets": 0 },
+                        { "bSortable": true, "aTargets":[0]}
+                        ]
+            });
+
     }
 }
 $(document).ready(function()
@@ -117,4 +142,5 @@ $(document).on('change', '#source_selector', function(event){
     console.log('Returned');
     console.log(event.target.value);
     SPIDY_APP.render_table(event.target.value);
-})
+
+});

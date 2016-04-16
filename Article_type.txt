@@ -271,7 +271,6 @@ Clothing Set
 Waistcoat
 Blazers
 Sandals
-Hat
 Polo Tshirts
 Wristbands
 Activewear

@@ -24,6 +24,7 @@ def create_set_string_care_about():
 def create_set_article_types():
     ats = set()
     file_name = "Article_type.txt"
+    # file_name = "Strings_I_Care_About.txt"
     f = open(file_name, 'r')
     for line in f:
         values = line.split(',')
@@ -82,46 +83,37 @@ def filter_data(res):
             at = mappings['dist_map'][value]
             if at not in res:
                 res[at] = []
-            if value not in res[at]:
-                res[at].append(value)
+            # if value not in res[at]:
+            res[at].append(value)
             continue
         if value in mappings['partial_map']:
             at = mappings['partial_map'][value]
             if at not in res:
                 res[at] = []
-            if value not in res[at]:
-                res[at].append(value)
+            # if value not in res[at]:
+            res[at].append(value)
             continue
-        res['misc'].append(value)
+        if ' ' in value.rstrip():
+            res['misc'].append(value)
     return res
-
-    '''
-    print "\n\n\n"
-    return_tags = {}
-    for item in input_tags:
-        return_tags[item] = set()
-        new_list = [s for s in json_response["response"]["data"]["tags"] if item in s]
-        if len(new_list):
-            [return_tags[item].add(s) for s in new_list]
-        if not len(return_tags[item]):
-            return_tags.pop(item)
-    return return_tags
-    '''
 
 
 def create_response(tags):
     res = {}
+    tags_only = []
     article_types = get_article_types()
     for tag in tags:
+        tags_only += tags[tag]
         if tag in article_types:
             res[tag] = []
             for t in tags[tag]:
                 res[tag].append(t)
         else:
-            if "Misc" not in res:
-                res["Misc"] = []
+            if "misc" not in res:
+                res["misc"] = []
             for t in tags[tag]:
-                res["Misc"].append(t)
+                res["misc"].append(t)
+
     return json.dumps(res)
 
 

@@ -37,6 +37,8 @@ def get_selection_gap(trends):
         gap_obj['source'] = source['source']
         # for each article type
         print 'Doing ', gap_obj['source']
+        print "Input "
+        print source['source']
         for article_type in source :
             if article_type == 'source':
                 continue
@@ -62,6 +64,9 @@ def get_selection_gap(trends):
                     gap_obj[article_type]['gap_count'] += 1
                 else:
                     gap_obj[article_type]['total_count'] += 1
+
+        print gap_obj['source'] + ' Done'
+        print gap_obj
         gap['data'].append(gap_obj)
 
     return gap

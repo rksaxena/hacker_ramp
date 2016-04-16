@@ -7,9 +7,13 @@ router.get('/',
   function(req, res, next) {
   res.render('index', { title: 'Home' });
 });
+router.get('/selectionGap',
+    function(req,res){
+    res.render('selection_gap')
+});
 router.get('/getSelectionGap',function(req,res)
 {
-    request("http://localhost:9905/getSelectionGap", function(error, response, body) {
+    request("http://192.168.12.155:12313/tags/all", function(error, response, body) {
     //console.log(body);
     res.send(body);
 });
