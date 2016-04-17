@@ -69,6 +69,11 @@ def final():
                 row[-1] += '\n'
                 g.write(','.join(row))
         # print mapping
-    return calculate_final_score(mapping)
+    mapping = calculate_final_score(mapping)
+    for key, value in mapping.iteritems():
+        for k,v in value.iteritems():
+            if "googlescore" not in v:
+                v['googlescore'] = 0
 
-final()
+    return mapping
+

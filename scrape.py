@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import requests
-# import scrapy
-# from scrapy.http import HtmlResponse
+import scrapy
+from scrapy.http import HtmlResponse
 import tags
 import string
 import json
@@ -190,6 +190,7 @@ def create_vogue_response(demo=False):
     for line in f:
         para += line + "\n"
     output_tags = tags.main(para)
+    output_tags.pop("misc")
     json_response = tags.create_response(output_tags)
     return add_source(json_response, "vogue")
 

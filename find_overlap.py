@@ -100,10 +100,12 @@ def map_article_types(data, source):
 
 
 def merge_dicts(dict1, dict2):
-    map1 = map_article_types(dict1, 'vogue')
-    map2 = map_article_types(dict2, 'zara')
+    #map1 = map_article_types(dict1, 'vogue')
+    #map2 = map_article_types(dict2, 'zara')
+    map1 = dict1
+    map2 = dict2
     # print json.dumps(map1)
-    print json.dumps(map2)
+    # print json.dumps(map2)
     cleaned_map1 = count_duplicates_within_source(map1)
     cleaned_map2 = count_duplicates_within_source(map2)
     # print cleaned_map2

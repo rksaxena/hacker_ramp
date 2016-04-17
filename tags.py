@@ -67,12 +67,11 @@ def call_text_enricher(text):
     return res
 
 
-def filter_data(res):
+def filter_data(res1):
     input_tags = get_tags()
-    json_response = res.json()
+    json_response = res1.json()
     mappings = create_article_type_map_zara(json_response["response"]["data"]["tags"])
     res = {
-        'source': 'vogue',
         'misc': []
     }
     for value in json_response["response"]["data"]["tags"]:
@@ -93,7 +92,7 @@ def filter_data(res):
             # if value not in res[at]:
             res[at].append(value)
             continue
-        if ' ' in value.rstrip():
+        if ' ' in value.strip():
             res['misc'].append(value)
     return res
 

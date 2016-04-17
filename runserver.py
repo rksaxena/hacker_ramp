@@ -43,14 +43,14 @@ def get_brands_all():
 @app.route('/tags/vogue')
 def get_tags_vogue():
     response = [scrape.start_with_file_vogue()]
-    response = myntra_selection_gap.get_selection_gap(response)
+    # response = myntra_selection_gap.get_selection_gap(response)
     return json.dumps(response)
 
 
 @app.route('/tags/zara')
 def get_tags_zara():
     response = [scrape.create_zara_response()]
-    response = myntra_selection_gap.get_selection_gap(response)
+    # response = myntra_selection_gap.get_selection_gap(response)
     return json.dumps(response)
 
 
