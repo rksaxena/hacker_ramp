@@ -42,7 +42,7 @@ def calculate_final_score(map):
     print "article,finalscore,percentile,googlescore,itfscore,count"
     for key, values in map.iteritems():
         for k, v in values.iteritems():
-            v['final_score'] = (0.6 * v['percentile'] * v['itf_score']) + (0.4 * (v['googlescore'] if 'googlescore' in v else 0))
+            v['final_score'] = (0.5 * v['percentile'] * v['itf_score']) + (0.5 * (v['googlescore'] if 'googlescore' in v else 0))
             print k + "," + str(v['final_score']) + "," + str(v['percentile']) + "," + str(v['googlescore'] if 'googlescore' in v else 0) + "," + str(v['itf_score']) + "," + str(v['count'])
     return map
 
@@ -72,8 +72,13 @@ def final():
     mapping = calculate_final_score(mapping)
     for key, value in mapping.iteritems():
         for k,v in value.iteritems():
+            v['final_score'] *= 100
+            v['itf_score'] *= 100
+            v['percentile'] *= 100
             if "googlescore" not in v:
                 v['googlescore'] = 0
+            else:
+                v['googlescore'] *= 100
 
     return mapping
 

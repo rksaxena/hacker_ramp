@@ -14,7 +14,7 @@ def get_tags_all():
             response = f.readline()
         print response
         return response
-    demo = False
+    demo = True
     response = [scrape.create_vogue_response(demo), scrape.create_zara_response(demo), scrape.create_elle_response(demo)]
     print response
     for json_value in response:
