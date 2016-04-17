@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/tags/all')
 def get_tags_all():
-    demo = False
+    demo = True
     if demo:
         with open("FinalResponse.txt", 'r') as f:
             response = f.readline()
@@ -35,8 +35,9 @@ def get_tags_all():
 
 @app.route('/brands/all')
 def get_brands_all():
-    response = [scrape.create_elle_response()]
-    response = myntra_selection_gap.get_selection_gap(response)
+    demo = True
+    response = [scrape.create_elle_response(demo)]
+    # response = myntra_selection_gap.get_selection_gap(response)
     return json.dumps(response)
 
 
