@@ -91,7 +91,7 @@ SPIDY_APP = {
                 break;
             }
         }
-        var thead = '<thead> <tr> <th> Categories </th> <th> Missing Fashion Objects </th> </tr></thead>';
+        var thead = '<thead> <tr> <th> Categories </th> <th> Missing Fashion Trends </th> </tr></thead>';
         var rows=''
         for (type in obj)
         {
