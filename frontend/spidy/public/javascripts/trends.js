@@ -9,7 +9,7 @@ Trend_APP = {
             article_types.push(index);
 
         }
-        var options='';
+        var options='<option value="ALL">ALL</option>';
         for (index in article_types)
             {
                 options = options + '<option value ="'+ article_types[index] + '">' + article_types[index] + '</option>'
@@ -21,6 +21,36 @@ Trend_APP = {
     render_table:function(article_type)
     {
 
+        if (article_type == 'ALL')
+        {
+            var rows=''
+            for (category in Trend_APP['trends'])
+            {
+                var obj = Trend_APP['trends'][category];
+                for (var trends in obj)
+                {
+                    rows = rows + '<tr><td>' + trends + '</td><td>' + obj[trends]['googlescore'].toFixed(2) + '</td><td>'+ obj[trends]['percentile'].toFixed(2)+ '</td><td>' + obj[trends]['itf_score'].toFixed(2) + '</td><td>' + obj[trends]['final_score'].toFixed(2) + '</td></tr>'
+                }
+            }
+            var thead = '<thead> <tr> <th> Fashion Trends </th><th>Google Score <th> Percentile </th> <th> ITF Score </th><th> Final Score </th> </tr></thead>';
+            var tbody='<tbody>' + rows + '</tbody>';
+            var table = '<table  id="trends_table" class="table table-bordered table-striped">' + thead + tbody + '</table>';
+            $('#graph_div').html('<br><center>' + table + '</center>');
+            $('#trends_table').DataTable(
+                {
+                "scrollY":        "100%",
+                "scrollCollapse": true,
+                "paging":         false,
+                "filter":false,
+                "order": [[ 4, "desc" ]],
+                "columnDefs": [
+                            { "width": "30%", "targets": 0 },
+                            { "bSortable": true, "aTargets":[1,2]}
+                            ]
+                });
+
+            return;
+        }
         $('#graph_div').html('<br><center>Loading Table ....</center>');
 
         var obj;
