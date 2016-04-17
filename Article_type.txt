@@ -75,6 +75,7 @@ Skirts
 Casual Shoes
 Saree Blouse
 Blouse
+Luggage Bags
 Salwar
 Watches
 Bags
@@ -119,8 +120,5 @@ Shorts
 Sari
 Bottoms
 Belt
-Tshirt
-Shirt
-Dress
-Scarf
 T-shirt
+Hat

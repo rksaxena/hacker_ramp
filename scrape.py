@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import requests
-import scrapy
-from scrapy.http import HtmlResponse
+# import scrapy
+# from scrapy.http import HtmlResponse
 import tags
 import string
 import json

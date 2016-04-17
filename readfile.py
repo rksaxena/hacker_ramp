@@ -2,7 +2,10 @@ import csv
 import find_overlap
 import scoring
 import collections
+import scrape
+import json
 
+mapping = dict()
 
 def calculate_sum_searches(file):
     score_map = collections.OrderedDict()
@@ -36,24 +39,36 @@ def calculate_sum_searches(file):
 
 
 def calculate_final_score(map):
+    print "article,finalscore,percentile,googlescore,itfscore,count"
     for key, values in map.iteritems():
         for k, v in values.iteritems():
+            v['final_score'] = (0.6 * v['percentile'] * v['itf_score']) + (0.4 * (v['googlescore'] if 'googlescore' in v else 0))
+            print k + "," + str(v['final_score']) + "," + str(v['percentile']) + "," + str(v['googlescore'] if 'googlescore' in v else 0) + "," + str(v['itf_score']) + "," + str(v['count'])
+    return map
 
+def final():
+    total, google_score_map = calculate_sum_searches('mynew.csv')
+    with open('mynew.csv', 'rb') as f, open('new.csv', 'w') as g:
+        output = csv.reader(f)
+        headers = next(output)
+        data1 = scrape.create_vogue_response(True)
+        data2 = scrape.create_zara_response(True)
+        print json.dumps(data1)
+        print json.dumps(data2)
+        merged_map = find_overlap.merge_dicts(data1, data2)
+        print merged_map
+        mapping = scoring.calculate_percentiles(merged_map)
+        for row in output:
+            article_type = find_overlap.get_article_type(row[1].replace('\'', ''))
+            print article_type
+            if article_type in mapping:
+                if row[3] == '':
+                    row[3] = '1'
+                if row[1].replace('\'', '') in mapping[article_type]:
+                    mapping[article_type][row[1].replace('\'', '')]['googlescore'] = google_score_map[int(row[3])]
+                row[-1] += '\n'
+                g.write(','.join(row))
+        # print mapping
+    return calculate_final_score(mapping)
 
-total, google_score_map = calculate_sum_searches('mynew.csv')
-with open('mynew.csv', 'rb') as f, open('new.csv', 'w') as g:
-    output = csv.reader(f)
-    headers = next(output)
-    data1 = find_overlap.vogue_data
-    data2 = find_overlap.zara_data
-    merged_map = find_overlap.merge_dicts(data1, data2)
-    mapping = scoring.calculate_percentiles(merged_map)
-    for row in output:
-        article_type = find_overlap.get_article_type(row[1].replace('\'', ''))
-        if row[1].replace('\'', '') in mapping[article_type]:
-            if row[3] == '':
-                row[3] = '1'
-            mapping[article_type][row[1].replace('\'', '')]['googlescore'] = google_score_map[int(row[3])]
-            row[-1] += '\n'
-            g.write(','.join(row))
-    print mapping
+final()
