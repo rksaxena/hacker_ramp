@@ -2,28 +2,14 @@ Tshirts
 Tops
 Handbags
 Earrings
-Frames
 Stoles
-Sweatshirts
+Sweatshirt
 Coats
-Deos
 Partywear Sari
-Suspenders
-Lounge Set
 Salwar and Dupatta
-Ornaments
 Precious Studded Pendant
-Hand Cream
-Dhoti Sets
-Tshirts - Shorts Combo Pack
-Sleepsuit
-Foot Care Accessories
 Bridal Sari
-Customizable Shoes
-Face Towels
 Frocks
-Bath Sets
-Serum
 Tote Bags
 Chain
 Mufflers
@@ -31,18 +17,7 @@ Necklace
 Nail Polish
 Lingerie accessories
 Maternity Bra
-Sunglasses Case
-Concealer
-Nail Polish Remover
-Poly Bag
-Eye Pencil
-Eyebrow Pencil
-Eye Liner
-Table Mat
-Beach Towels
-Kurta Pyjama
 Dresses
-Lounge Pants
 Lehenga Choli
 Churidar and Dupatta
 Swimwear
@@ -50,49 +25,20 @@ Robe
 Ties and Cufflings
 Lounge Shorts
 Precious Studded Earrings
-Baby Dolls
-Eyeliner
-Lip Gloss
-Brush
-Face Brightener
-Bath Rugs
-Table Cloth
-Rain Trousers
-Tent
-Compact Powder
-Dummy
 Shirts
 Backpacks
 Heels
 Sunglasses
 Tracksuits
 Tights
-Travel Accessory
 Camisoles
 Saree Accessories
-Key chain
-Box
-Mobile Accessories
-Personalization Cost
 Boxers
 Jumpsuit
-Cushion Covers
 Duffle Bag
 Jerseys
-Body Care
-Shapewear
 Rucksacks
-Card Holder
 Corset
-Sleep Shirts
-Rain Jacket
-Brooch
-Aprons
-Fitted Sheets
-SKD
-Precious Plain Bangle
-Headphones
-Curtain
 Leggings
 Clutches
 Wallets
@@ -100,164 +46,46 @@ Socks
 Embellished Saree
 Dhotis
 Churidar Kurta
-Duffel Bag
-Mobile Pouch
 Bra
-Football
 Suits
-Pocket Squares
-Foundation
-Bedsheets
-Mascara
-Tanmaniya
-Multi Kurta Set
-Beauty Gift Set
-Carpets
-Divan Set
-Pens
-Workout Accessories
-Napkin Set
-Shoe Laces
-Bed Sheets
-Travellers Kit
 Traditional Sari
 Jeggings
-Pendant
-Bag
-Trolley Bag
-Cufflinks
-Mens Grooming
 Sherwani
-Tablet Sleeve
 Patiala Kurta Set
-Day Cream
-Night Cream
 Dungarees
 Stockings
-Massage
 Thermal Bottoms
 Jodhpuri Pants
 3/4 Length Pants
-Blankets, Quilts & Dohars
-Candles
-Pillows
-Comforters
-Candle Holders
-Shoe Polish
-Lip Plumper
-Laptop Sleeve
 Jeans
 Innerwear Vests
 Fashion Sari
-Patiala
-Patiala and Dupatta
-Face Wash
-Facial Kit
-Pillow Covers
-Sunscreen
-Nail Art
-Kajal
-Body Mist
-Clothing Fabric
-Doormats
-Pyjama Set
-Shaper Brief
-Tray
-Sleepwear
-Precious Plain Pendant
-Duvet
-Cricket Balls
 Flats
 Sports Sandals
 Salwar Suit
-Perfumes
 Trunk
-Mangalsutra
-Tie Cufflink & Pocket Square Set
 Fashion Saree
-Nail Care Accessories
-Waist Pouch
-Kurta and Dupatta
-Lip Balm
 Smart Watches
-Combo Pack Perfume
-Ipad
-Mugs
-Shirt & Accessory Set
-Fragrances
-Promotional Vouchers
-Table Runner
-Precious Plain Rings
-Door Curtain
-Laptop Bag
 Capris
-Shawl
-Headband
-One Minute Sari
 Pyjamas
-Lounge Top
-Bodysuit
-Night suits
-Fragrance Gift Set
-Bath Accessories
-Foot Cream
-Panties
-Makeup Remover
-Bath Robe
-Basketball Balls
-Bed Covers
-Towel Set
-Double Bed Sheet
 Clogs
-Wall Decor
-Magazine Rack
-GlobalTaxonomy
 Purses
 Sweaters
 Skirts
 Casual Shoes
-Ring
 Saree Blouse
 Blouse
-Luggage Bags
 Salwar
-Sports Accessories
 Watches
 Bags
-Water Bottle
-Lingerie Set
-Moisturiser
-Clocks
-Burqas
-Umbrellas
-Dhurrie
 Jackets
 Belts
-Hair Accessory
-Accessory Gift Set
 Formal Shoes
 Churidar
-Bangle
-Caps
-Beauty Product Set
-Nosepin
-Beauty Accessory
-Multi Saree Set
-Maternity Brief
 Slippers
-Eye Cream
-Bath Towels
-Hand Towels
-Scrub
-Scarves
 Dress Material
 Sports Shoes
 Harem Pants
-Earring & Pendant Set
-Lip Liner
-Rompers
-Soap
-Compact
 Vests
 Curtains & Sheers
 Traditional Saree
@@ -265,29 +93,13 @@ Sling Bag
 One Minute Saree
 Shrug
 Tunics
-Bracelet
 Flip Flops
-Clothing Set
 Waistcoat
 Blazers
 Sandals
 Polo Tshirts
-Wristbands
-Activewear
-Nightdress
-Free Gifts
-Ties, Cufflinks and Pocket Square
-Essential Oil
-Home Fragrances
-Eye Shadow
 Thermal Tops
 Sleep Shorts
-Booties
-Smart Bands
-Duvet Cover
-Mug
-Floor Mats & Dhurries
-Shoe Care
 Padded Brief
 Printed Sari
 Trousers
@@ -299,41 +111,12 @@ Briefs
 Gloves
 Dupatta
 Jewellery Set
-Cleanser
-Coaster
-Shower Gel
 Sports Bra
-Lipstick
 Printed Saree
-Face Treatment
-Shampoo
-Toiletry Kits
-Maternity Sleepwear
-Blusher
-Lip Colour
-Misc Consumable
-Shoe Accessories
-Hard Drive case
-Waist Coat
-Tan Removal
-Ipod
-Sleeping Mat
-Bath Towel
 Jewellery
 Track Pants
 Shorts
-Necklaces & Chains
-Hair Care
-Ties and Cufflinks
-Hair Colour
-Swimwear Accessories
-Vases
-Manicure Set
-Cushions
-Passport Holder
 Sari
-Basketball
-Bedding Set
 Bottoms
 Belt
 Tshirt
