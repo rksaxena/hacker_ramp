@@ -165,11 +165,15 @@ def create_article_type_map_zara(tags):
         for k in ks:
             for r in ref_list:
                 if r in k:
-                    partial_map_ct += 1
-                    ks = " ".join(ks)
-                    partial_map[ks] = r
-                    f = True
-                    break
+                    if not f:
+                        partial_map_ct += 1
+                        ks = " ".join(ks)
+                        partial_map[ks] = r
+                        f = True
+                    else:
+                        if len(partial_map[ks]) < len(r):
+                            partial_map[ks] = r
+                    #break
             if f:
                 break
 
