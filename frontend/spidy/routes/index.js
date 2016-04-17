@@ -17,13 +17,13 @@ router.get('/trending',
 });
 router.get('/getSelectionGap',function(req,res)
 {
-    request("http://192.168.12.155:12313/tags/all", function(error, response, body) {
+    request("http://localhost:12313/tags/all", function(error, response, body) {
     //console.log(body);
     res.send(body);
     });
 });
 router.get('/getTrending',function(req,res){
-    request('http://192.168.12.155:12313/tags/ranks',function(error,response,body){
+    request('http://localhost:12313/tags/ranks',function(error,response,body){
         console.log(body);
         res.send(body);
     })
