@@ -11,7 +11,6 @@ Precious Studded Pendant
 Bridal Sari
 Frocks
 Tote Bags
-Chain
 Mufflers
 Necklace
 Nail Polish
@@ -121,3 +120,4 @@ Sari
 Bottoms
 Belt
 T-shirt
+Dress
