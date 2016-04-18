@@ -134,9 +134,10 @@ def create_elle_response(demo=False):
     f = open("CrawledOutputElle.txt", 'r')
     tags = []
     for line in f:
-        tags.append(line.rstrip()[:-1])
+        if len(line.strip()[:-1]):
+            tags.append(line.rstrip()[:-1])
     f.close()
-    res = {'source': 'elle', 'brands': tags}
+    res = {'brands': tags}
     return res
 
 

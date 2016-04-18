@@ -50,4 +50,5 @@ Frame denims,
 Bhane, 
 Dune, 
 Red Valentino, 
-Ray-Ban
+Ray-Ban,
+
